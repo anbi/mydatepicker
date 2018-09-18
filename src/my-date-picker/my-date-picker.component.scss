@@ -123,6 +123,8 @@
     background-color: #FFF;
     display: table-cell;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     padding: 0 64px 0 4px;
     overflow: hidden;
@@ -131,6 +133,7 @@
     padding-left: 6px;
     border: none;
     color: #555;
+
 }
 
 .mydp .invaliddaterange {
