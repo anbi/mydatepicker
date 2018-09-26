@@ -15,7 +15,9 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: GothamHTF-Book;
+  color: rgba(0,0,0,.6);
+  font-weight: normal;
   padding: 0;
   margin: 0
 }
@@ -131,7 +133,7 @@
   padding: 0 64px 0 6px;
   text-overflow: ellipsis;
   border: none;
-  color: #555
+  color: rgba(0,0,0,0.6);
 }
 
 .mydp .invaliddaterange {
@@ -331,6 +333,12 @@
   height: 22px
 }
 
+.mydp .headerlabelbtn {
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px; 
+}
+
 .mydp .headerbtn {
   width: 16px
 }
@@ -358,10 +366,12 @@
   color: #000
 }
 .mydp .icon-mydpup:before {
-  content: "\2191";
+  content: "↓";
+  display: inline-block;
+  transform: rotate(180deg);
 }
 .mydp .icon-mydpdown:before {
-  content: "\2193";
+  content: "↓";
 }
 
 .mydp button::-moz-focus-inner {
@@ -441,7 +451,7 @@
 
 .mydp {
   border: none !important;
-  border-radius: 0 !important;
+  border-radius: 4px !important;
   border-bottom: 1px solid #333 !important
 }
 
@@ -565,11 +575,11 @@
 }
 
 .mydp .header .headerbtncell.prev {
-  right: 40px
+  right: 20px
 }
 
 .mydp .header .headerbtncell.next {
-  right: 10px
+  right: -5px
 }
 
 .mydp .selectiongroup .seletion {

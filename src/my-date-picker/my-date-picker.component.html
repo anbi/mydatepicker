@@ -25,7 +25,7 @@
                     <span class="headerlabelbtn" [ngClass]="{'yearlabel': opts.yearSelector}" (click)="opts.yearSelector&&onSelectYearClicked($event)" tabindex="{{opts.yearSelector?'0':'-1'}}">{{visibleMonth.year}}</span>
                 </div>
             </div>
-            <div class="month" [ngStyle]="{'width': !opts.yearSelector ? '100%' : '50%'}">
+            <div class="month" [ngStyle]="{'width': !opts.yearSelector ? '100%' : '45%'}">
                 <div class="headermonthtxt">{{visibleMonth.monthTxt}}</div>
                 <div class="headerbtncell prev"><button type="button" class="headerbtn mydpicon icon-mydpleft"
                         [attr.aria-label]="opts.ariaLabelPrevMonth" (click)="onPrevMonth()" [disabled]="prevMonthDisabled"
