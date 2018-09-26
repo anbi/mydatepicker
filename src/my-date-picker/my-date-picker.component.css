@@ -1,64 +1,78 @@
+.mydp .monthcell,
+.mydp .selection,
+.mydp .weekdaytitle {
+  overflow: hidden;
+  white-space: nowrap
+}
+
 .mydp {
   line-height: 1;
   display: inline-block;
-  position: relative; }
+  position: relative
+}
 
 .mydp * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "GothamHTF-Light";
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 0;
-  margin: 0; }
+  margin: 0
+}
 
 .mydp,
-.mydp .selectiongroup,
+.mydp .headertodaybtn,
 .mydp .selection,
-.mydp .selector,
-.mydp .headertodaybtn {
-  border-radius: 6px; }
+.mydp .selectiongroup,
+.mydp .selector {
+  border-radius: 4px
+}
 
-.mydp .header {
-  border-radius: 4px 4px 0 0; }
-
+.mydp .header,
 .mydp .titlearea,
 .mydp .titleareatxt {
-  border-radius: 4px 4px 0 0; }
+  border-radius: 4px 4px 0 0
+}
 
 .mydp .caltable,
 .mydp .monthtable,
 .mydp .yeartable {
-  border-radius: 0 0 4px 4px; }
+  border-radius: 0 0 4px 4px
+}
 
 .mydp .caltable tbody tr:nth-child(6) td:first-child,
 .mydp .monthtable tbody tr:nth-child(4) td:first-child,
 .mydp .yeartable tbody tr:nth-child(7) td:first-child {
-  border-bottom-left-radius: 4px; }
+  border-bottom-left-radius: 4px
+}
 
 .mydp .caltable tbody tr:nth-child(6) td:last-child,
 .mydp .monthtable tbody tr:nth-child(4) td:last-child,
 .mydp .yeartable tbody tr:nth-child(7) td:last-child {
-  border-bottom-right-radius: 4px; }
+  border-bottom-right-radius: 4px
+}
 
 .mydp .btnpicker {
-  border-radius: 0 4px 4px 0; }
+  border-radius: 0 4px 4px 0
+}
 
 .mydp .selector {
   margin-top: 2px;
   margin-left: -1px;
   position: absolute;
-  padding: 0;
-  border: 1px solid #CCC;
   z-index: 100;
-  animation: selectorfadein 0.06s; }
+  animation: selectorfadein 60ms
+}
 
 @keyframes selectorfadein {
   from {
-    opacity: 0; }
+    opacity: 0
+  }
+
   to {
-    opacity: 1; } }
+    opacity: 1
+  }
+}
 
 .mydp .selectorarrow:after,
 .mydp .selectorarrow:before {
@@ -67,78 +81,90 @@
   content: " ";
   height: 0;
   width: 0;
-  position: absolute; }
+  position: absolute
+}
 
 .mydp .selectorarrow:after {
   border-color: rgba(250, 250, 250, 0);
   border-bottom-color: #FFF;
   border-width: 10px;
-  margin-left: -10px; }
+  margin-left: -10px
+}
 
 .mydp .selectorarrow:before {
   border-color: rgba(204, 204, 204, 0);
   border-bottom-color: #CCC;
   border-width: 11px;
-  margin-left: -11px; }
+  margin-left: -11px
+}
 
 .mydp .selectorarrowleft:after,
 .mydp .selectorarrowleft:before {
-  left: 24px; }
+  left: 24px
+}
 
 .mydp .selectorarrowright:after,
 .mydp .selectorarrowright:before {
-  left: 224px; }
+  left: 224px
+}
 
 .mydp .alignselectorright {
-  right: -1px; }
+  right: -1px
+}
 
 .mydp .selectiongroup {
   position: relative;
   display: table;
   border: none;
   border-spacing: 0;
-  background-color: #FFF; }
+  background-color: #FFF
+}
 
 .mydp .selection {
-  width: 100%;
-  outline: none;
+  outline: 0;
   background-color: #FFF;
   display: table-cell;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  padding: 0 64px 0 4px;
-  overflow: hidden;
+  padding: 0 64px 0 6px;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  padding-left: 6px;
   border: none;
-  color: #555; }
+  color: #555
+}
 
 .mydp .invaliddaterange {
-  background-color: #F1DEDE; }
+  background-color: #F1DEDE
+}
 
 .mydp ::-ms-clear {
-  display: none; }
+  display: none
+}
+
+.mydp .headerbtncell,
+.mydp .selbtngroup {
+  display: table-cell;
+  vertical-align: middle
+}
 
 .mydp .selbtngroup {
   position: relative;
-  vertical-align: middle;
   white-space: nowrap;
   width: 1%;
-  display: table-cell;
-  font-size: 0; }
+  font-size: 0
+}
 
-.mydp .btnpicker,
-.mydp .btnclear {
+.mydp .btnclear,
+.mydp .btnpicker {
   height: 100%;
   width: 26px;
   border: none;
   padding: 0;
   outline: 0;
   font: inherit;
-  -moz-user-select: none; }
+  -moz-user-select: none
+}
 
 .mydp .headerclearbtn,
 .mydp .headerokbtn {
@@ -147,61 +173,72 @@
   font-size: 11px;
   height: 20px;
   width: 28px;
-  outline: none; }
+  outline: 0
+}
 
-.mydp .btnpickerenabled,
 .mydp .btnclearenabled,
+.mydp .btnpickerenabled,
 .mydp .headerbtnenabled,
 .mydp .yearchangebtnenabled {
-  cursor: pointer; }
+  cursor: pointer
+}
 
-.mydp .selectiondisabled,
-.mydp .btnpickerdisabled,
 .mydp .btncleardisabled,
-.mydp .headerbtndisabled,
+.mydp .btnpickerdisabled,
 .mydp .clearbtndisabled,
+.mydp .headerbtndisabled,
 .mydp .okbtndisabled,
+.mydp .selectiondisabled,
 .mydp .yearchangebtndisabled {
   cursor: not-allowed;
-  opacity: 0.65; }
+  opacity: .65
+}
 
 .mydp .selectiondisabled {
   background: transparent !important;
-  border-bottom: 1px solid #EEE; }
+}
 
-.mydp .btnpicker,
 .mydp .btnclear,
+.mydp .btnpicker,
 .mydp .headerclearbtn,
 .mydp .headerokbtn {
-  background: #FFF; }
+  background: #FFF
+}
 
 .mydp .header td {
   vertical-align: middle;
   border: none;
-  line-height: 0; }
+  line-height: 0
+}
 
 .mydp .header td:nth-child(1) {
-  padding-left: 4px; }
+  padding-left: 4px
+}
 
 .mydp .header td:nth-child(2) {
-  text-align: center; }
+  text-align: center
+}
 
 .mydp .header td:nth-child(3) {
-  padding-right: 4px; }
+  padding-right: 4px
+}
 
 .mydp .titlearea {
   text-align: center;
-  background-color: #FFF; }
+  background-color: #FFF
+}
 
 .mydp .titleareatxt {
   height: 24px;
   line-height: 24px;
   font-size: 12px;
-  border-bottom: 1px solid #EEE; }
+  border-bottom: 1px solid #EEE
+}
 
 .mydp .inline {
   position: relative;
-  margin-top: -1px; }
+  margin-top: -1px
+}
 
 .mydp .caltable,
 .mydp .monthtable,
@@ -209,75 +246,63 @@
   table-layout: fixed;
   width: 100%;
   background-color: #FFF;
-  font-size: 14px; }
+  font-size: 14px
+}
 
 .mydp .caltable,
+.mydp .daycell,
+.mydp .monthcell,
 .mydp .monthtable,
-.mydp .yeartable,
 .mydp .weekdaytitle,
-.mydp .daycell,
-.mydp .monthcell,
-.mydp .yearcell {
+.mydp .yearcell,
+.mydp .yeartable {
   border-collapse: collapse;
-  color: #003366;
-  line-height: 1.1; }
+  line-height: 1.1
+}
 
-.mydp .weekdaytitle,
 .mydp .daycell,
 .mydp .monthcell,
+.mydp .weekdaytitle,
 .mydp .yearcell {
   padding: 4px;
-  text-align: center; }
-
-.mydp .weekdaytitle {
-  background-color: #DDD;
-  font-size: 11px;
-  font-weight: normal;
-  vertical-align: middle;
-  max-width: 36px;
-  overflow: hidden;
-  white-space: nowrap; }
+  text-align: center
+}
 
 .mydp .weekdaytitleweeknbr {
   width: 20px;
-  border-right: 1px solid #BBB; }
+  border-right: 1px solid #BBB
+}
 
 .mydp .monthcell {
-  background-color: #FAFAFA;
-  overflow: hidden;
-  white-space: nowrap; }
+  background-color: #FAFAFA
+}
 
 .mydp .yearcell {
   background-color: #FAFAFA;
-  width: 20%; }
+  width: 20%
+}
 
 .mydp .daycellweeknbr {
   font-size: 10px;
   border-right: 1px solid #CCC;
   cursor: default;
-  color: #000; }
-
-.mydp .prevmonth,
-.mydp .nextmonth {
-  color: #444; }
-
-.mydp .sunday {
-  color: #C30000; }
+  color: #000
+}
 
 .mydp .sundayDim {
-  opacity: 0.5; }
+  opacity: .5
+}
 
 .mydp .currmonth {
   background-color: #F6F6F6;
-  font-weight: normal; }
-
-.mydp .range {
-  background-color: #D9F2E6; }
+  font-weight: 400
+}
 
 .mydp .markcurrday,
 .mydp .markcurrmonth,
 .mydp .markcurryear {
-  text-decoration: underline; }
+  text-decoration: underline
+}
 
 .mydp .selecteddaybegin,
 .mydp .selecteddayend,
@@ -285,219 +310,306 @@
 .mydp .selectedyear .yearvalue {
   border: none;
   background-color: #8EBFFF;
-  border-radius: 2px; }
+  border-radius: 2px
+}
 
 .mydp .headerbtncell {
   background-color: #FFF;
-  cursor: pointer;
-  display: table-cell;
-  vertical-align: middle; }
+  cursor: pointer
+}
 
 .mydp .yearchangebtncell {
   text-align: center;
-  background-color: #FAFAFA; }
+  background-color: #FAFAFA
+}
 
 .mydp .headerbtn,
 .mydp .headerlabelbtn,
 .mydp .yearchangebtn {
-  background: #FFF;
+  background: transparent;
   border: none;
-  height: 22px; }
+  height: 22px
+}
 
 .mydp .headerbtn {
-  width: 16px; }
+  width: 16px
+}
 
 .mydp .headerlabelbtn {
   font-size: 14px;
-  outline: none;
-  cursor: default; }
+  outline: 0;
+  cursor: default
+}
 
 .mydp,
 .mydp .headerclearbtn,
 .mydp .headerokbtn {
-  border: 1px solid #CCC; }
+  border: 1px solid #CCC
+}
 
-.mydp .btnpicker,
 .mydp .btnclear,
+.mydp .btnpicker,
 .mydp .headerbtn,
-.mydp .headermonthtxt,
-.mydp .headeryeartxt,
 .mydp .headerclearbtn,
+.mydp .headermonthtxt,
 .mydp .headerokbtn,
+.mydp .headeryeartxt,
 .mydp .yearchangebtn {
-  color: #000; }
+  color: #000
+}
+.mydp .icon-mydpup:before {
+  content: "\2191";
+}
+.mydp .icon-mydpdown:before {
+  content: "\2193";
+}
 
 .mydp button::-moz-focus-inner {
-  border: 0; }
+  border: 0
+}
 
 .mydp .headerbtn:focus,
 .mydp .monthlabel:focus,
-.mydp .yearlabel:focus,
-.mydp .yearchangebtn:focus {
-  outline: none; }
+.mydp .yearchangebtn:focus,
+.mydp .yearlabel:focus {
+  outline: 0
+}
 
 .mydp .icon-mydpcalendar,
 .mydp .icon-mydpok,
 .mydp .icon-mydpremove {
-  font-size: 16px; }
+  font-size: 16px
+}
 
+.mydp .icon-mydpdown,
 .mydp .icon-mydpleft,
 .mydp .icon-mydpright,
-.mydp .icon-mydpup,
-.mydp .icon-mydpdown {
+.mydp .icon-mydpup {
   color: #222;
-  font-size: 20px; }
+  font-size: 20px
+}
 
 .mydp table {
   display: table;
-  border-spacing: 0; }
+  border-spacing: 0
+}
 
 .mydp table td {
-  padding: 0; }
+  padding: 0
+}
 
 .mydp table,
-.mydp th,
-.mydp td {
-  border: none; }
+.mydp td,
+.mydp th {
+  border: none
+}
 
-.mydp .monthlabel,
-.mydp .yearlabel,
-.mydp .inputnoteditable,
 .mydp .daycell,
+.mydp .inputnoteditable,
 .mydp .monthcell,
-.mydp .yearcell {
-  cursor: pointer; }
+.mydp .monthlabel,
+.mydp .yearcell,
+.mydp .yearlabel {
+  cursor: pointer
+}
 
 .mydp .btnpicker {
   width: 47px;
-  height: 22px; }
+  height: 22px
+}
 
 .mydp .icon-mydpcalendar {
   width: 47px;
   height: 22px;
-  display: inline-block; }
-  .mydp .icon-mydpcalendar:before {
-    width: 47px;
-    height: 22px;
-    display: inline-block;
-    content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDNweCIgaGVpZ2h0PSIyMXB4IiB2aWV3Qm94PSIwIDAgNDMgMjEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIzNi4wMDAwMDAsIC0xODIuMDAwMDAwKSIgZmlsbD0iIzMzMzMzMyI+ICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjcyLjUwMDAwMCwgMTk1LjAwMDAwMCkgc2NhbGUoLTEsIDEpIHJvdGF0ZSgtMjcwLjAwMDAwMCkgdHJhbnNsYXRlKC0yNzIuNTAwMDAwLCAtMTk1LjAwMDAwMCkgdHJhbnNsYXRlKDI2OS4wMDAwMDAsIDE4OS4wMDAwMDApIiBmaWxsLXJ1bGU9Im5vbnplcm8iPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNS4wNTU1NTU1Niw2IEwwLjIyOTM5MjIzNywxMC43MTgxNDQ2IEMtMC4wNzUyMjI1MDM0LDExLjAxMDE5MjkgLTAuMDc2NjQwOTcxNiwxMS40ODUwNjQ3IDAuMjI2MjI0LDExLjc3ODgwMDMgQzAuNTI5MDg4OTcxLDEyLjA3MjUzNiAxLjAyMTU0ODU4LDEyLjA3MzkwMzggMS4zMjYxNjMzMiwxMS43ODE4NTU0IEw2Ljc3MDYwNzc2LDYuNTYyMDEyNSBDNy4wNzUyMjYwNiw2LjI2OTk2MDczIDcuMDc2NjQwNDgsNS43OTUwODIyIDYuNzczNzY2OTUsNS41MDEzNDc5NSBMMS4zMjkzMjI1MSwwLjIyMTE5MDg4MyBDMS4wMjY0NTI1MSwtMC4wNzI1Mzk5NDE3IDAuNTMzOTkyODgxLC0wLjA3Mzg5OTkxNTkgMC4yMjkzODMxMzgsMC4yMTgxNTMyOTUgQy0wLjA3NTIyNjYwNjIsMC41MTAyMDY1MDYgLTAuMDc2NjM2OTQ5OCwwLjk4NTA3ODI5MyAwLjIyNjIzMzA0NywxLjI3ODgwOTEyIEw1LjA1NTU1NTU2LDYgWiI+PC9wYXRoPiAgICAgICAgICAgIDwvZz4gICAgICAgICAgICA8cGF0aCBkPSJNMjU1LjU5NTk0NywxODUuMjMzMDA4IEwyNTQuNTUwODMsMTg1LjIzMzAwOCBMMjU0LjU1MDgzLDE4Ni45MzEzMjMgQzI1NC41NTA4MywxODguMTU3NzY4IDI1My41NTYxNCwxODkuMTUyMTk3IDI1Mi4zMjk5NTYsMTg5LjE1MjE5NyBDMjUxLjEwMzc3MiwxODkuMTUyMTk3IDI1MC4xMDkwODIsMTg4LjE1Nzc2OCAyNTAuMTA5MDgyLDE4Ni45MzEzMjMgTDI1MC4xMDkwODIsMTg1LjIzMzAwOCBMMjQyLjc5MzI2MiwxODUuMjMzMDA4IEwyNDIuNzkzMjYyLDE4Ni45MzEzMjMgQzI0Mi43OTMyNjIsMTg4LjE1Nzc2OCAyNDEuNzk4ODMzLDE4OS4xNTIxOTcgMjQwLjU3MjM4OCwxODkuMTUyMTk3IEMyMzkuMzQ1OTQzLDE4OS4xNTIxOTcgMjM4LjM1MTUxNCwxODguMTU3NzY4IDIzOC4zNTE1MTQsMTg2LjkzMTMyMyBMMjM4LjM1MTUxNCwxODUuMjMzMDA4IEwyMzcuMzA2Mzk2LDE4NS4yMzMwMDggQzIzNi41ODQ3NDMsMTg1LjIzMzAwOCAyMzYsMTg1LjgxNzc1MSAyMzYsMTg2LjUzOTQwNCBMMjM2LDIwMS42OTM2MDQgQzIzNiwyMDIuNDE1MjU3IDIzNi41ODQ3NDMsMjAzIDIzNy4zMDYzOTYsMjAzIEwyNTMuNzY2OTkyLDIwMyBMMjU2LjkwMjM0NCwxOTkuODY0NjQ4IEwyNTYuOTAyMzQ0LDE4Ni41Mzk0MDQgQzI1Ni45MDIzNDQsMTg1LjgxNzc1MSAyNTYuMzE3NjAxLDE4NS4yMzMwMDggMjU1LjU5NTk0NywxODUuMjMzMDA4IE0yNTIuMzI5OTU2LDE4OC4xMDcwOCBDMjUzLjEyMzQ2MSwxODguMTA3MDggMjUzLjc2Njk5MiwxODcuNDYzNTQ5IDI1My43NjY5OTIsMTg2LjY3MDA0NCBMMjUzLjc2Njk5MiwxODQuMzE4NTMgQzI1My43NjY5OTIsMTgzLjUyNTAyNSAyNTMuMTIzNDYxLDE4Mi44ODE0OTQgMjUyLjMyOTk1NiwxODIuODgxNDk0IEMyNTEuNTM2NDUxLDE4Mi44ODE0OTQgMjUwLjg5MjkyLDE4My41MjUwMjUgMjUwLjg5MjkyLDE4NC4zMTg1MyBMMjUwLjg5MjkyLDE4Ni42NzAwNDQgQzI1MC44OTI5MiwxODcuNDYzNTQ5IDI1MS41MzY0NTEsMTg4LjEwNzA4IDI1Mi4zMjk5NTYsMTg4LjEwNzA4IE0yNDAuNTcyMzg4LDE4OC4xMDcwOCBDMjQxLjM2NTg5MywxODguMTA3MDggMjQyLjAwOTQyNCwxODcuNDYzNTQ5IDI0Mi4wMDk0MjQsMTg2LjY3MDA0NCBMMjQyLjAwOTQyNCwxODQuMzE4NTMgQzI0Mi4wMDk0MjQsMTgzLjUyNTAyNSAyNDEuMzY1ODkzLDE4Mi44ODE0OTQgMjQwLjU3MjM4OCwxODIuODgxNDk0IEMyMzkuNzc4ODgyLDE4Mi44ODE0OTQgMjM5LjEzNTM1MiwxODMuNTI1MDI1IDIzOS4xMzUzNTIsMTg0LjMxODUzIEwyMzkuMTM1MzUyLDE4Ni42NzAwNDQgQzIzOS4xMzUzNTIsMTg3LjQ2MzU0OSAyMzkuNzc4ODgyLDE4OC4xMDcwOCAyNDAuNTcyMzg4LDE4OC4xMDcwOCI+PC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+); }
+  display: inline-block
+}
+
+.mydp .icon-mydpcalendar:before {
+  width: 47px;
+  height: 22px;
+  display: inline-block;
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDNweCIgaGVpZ2h0PSIyMXB4IiB2aWV3Qm94PSIwIDAgNDMgMjEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIzNi4wMDAwMDAsIC0xODIuMDAwMDAwKSIgZmlsbD0iIzMzMzMzMyI+ICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjcyLjUwMDAwMCwgMTk1LjAwMDAwMCkgc2NhbGUoLTEsIDEpIHJvdGF0ZSgtMjcwLjAwMDAwMCkgdHJhbnNsYXRlKC0yNzIuNTAwMDAwLCAtMTk1LjAwMDAwMCkgdHJhbnNsYXRlKDI2OS4wMDAwMDAsIDE4OS4wMDAwMDApIiBmaWxsLXJ1bGU9Im5vbnplcm8iPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNS4wNTU1NTU1Niw2IEwwLjIyOTM5MjIzNywxMC43MTgxNDQ2IEMtMC4wNzUyMjI1MDM0LDExLjAxMDE5MjkgLTAuMDc2NjQwOTcxNiwxMS40ODUwNjQ3IDAuMjI2MjI0LDExLjc3ODgwMDMgQzAuNTI5MDg4OTcxLDEyLjA3MjUzNiAxLjAyMTU0ODU4LDEyLjA3MzkwMzggMS4zMjYxNjMzMiwxMS43ODE4NTU0IEw2Ljc3MDYwNzc2LDYuNTYyMDEyNSBDNy4wNzUyMjYwNiw2LjI2OTk2MDczIDcuMDc2NjQwNDgsNS43OTUwODIyIDYuNzczNzY2OTUsNS41MDEzNDc5NSBMMS4zMjkzMjI1MSwwLjIyMTE5MDg4MyBDMS4wMjY0NTI1MSwtMC4wNzI1Mzk5NDE3IDAuNTMzOTkyODgxLC0wLjA3Mzg5OTkxNTkgMC4yMjkzODMxMzgsMC4yMTgxNTMyOTUgQy0wLjA3NTIyNjYwNjIsMC41MTAyMDY1MDYgLTAuMDc2NjM2OTQ5OCwwLjk4NTA3ODI5MyAwLjIyNjIzMzA0NywxLjI3ODgwOTEyIEw1LjA1NTU1NTU2LDYgWiI+PC9wYXRoPiAgICAgICAgICAgIDwvZz4gICAgICAgICAgICA8cGF0aCBkPSJNMjU1LjU5NTk0NywxODUuMjMzMDA4IEwyNTQuNTUwODMsMTg1LjIzMzAwOCBMMjU0LjU1MDgzLDE4Ni45MzEzMjMgQzI1NC41NTA4MywxODguMTU3NzY4IDI1My41NTYxNCwxODkuMTUyMTk3IDI1Mi4zMjk5NTYsMTg5LjE1MjE5NyBDMjUxLjEwMzc3MiwxODkuMTUyMTk3IDI1MC4xMDkwODIsMTg4LjE1Nzc2OCAyNTAuMTA5MDgyLDE4Ni45MzEzMjMgTDI1MC4xMDkwODIsMTg1LjIzMzAwOCBMMjQyLjc5MzI2MiwxODUuMjMzMDA4IEwyNDIuNzkzMjYyLDE4Ni45MzEzMjMgQzI0Mi43OTMyNjIsMTg4LjE1Nzc2OCAyNDEuNzk4ODMzLDE4OS4xNTIxOTcgMjQwLjU3MjM4OCwxODkuMTUyMTk3IEMyMzkuMzQ1OTQzLDE4OS4xNTIxOTcgMjM4LjM1MTUxNCwxODguMTU3NzY4IDIzOC4zNTE1MTQsMTg2LjkzMTMyMyBMMjM4LjM1MTUxNCwxODUuMjMzMDA4IEwyMzcuMzA2Mzk2LDE4NS4yMzMwMDggQzIzNi41ODQ3NDMsMTg1LjIzMzAwOCAyMzYsMTg1LjgxNzc1MSAyMzYsMTg2LjUzOTQwNCBMMjM2LDIwMS42OTM2MDQgQzIzNiwyMDIuNDE1MjU3IDIzNi41ODQ3NDMsMjAzIDIzNy4zMDYzOTYsMjAzIEwyNTMuNzY2OTkyLDIwMyBMMjU2LjkwMjM0NCwxOTkuODY0NjQ4IEwyNTYuOTAyMzQ0LDE4Ni41Mzk0MDQgQzI1Ni45MDIzNDQsMTg1LjgxNzc1MSAyNTYuMzE3NjAxLDE4NS4yMzMwMDggMjU1LjU5NTk0NywxODUuMjMzMDA4IE0yNTIuMzI5OTU2LDE4OC4xMDcwOCBDMjUzLjEyMzQ2MSwxODguMTA3MDggMjUzLjc2Njk5MiwxODcuNDYzNTQ5IDI1My43NjY5OTIsMTg2LjY3MDA0NCBMMjUzLjc2Njk5MiwxODQuMzE4NTMgQzI1My43NjY5OTIsMTgzLjUyNTAyNSAyNTMuMTIzNDYxLDE4Mi44ODE0OTQgMjUyLjMyOTk1NiwxODIuODgxNDk0IEMyNTEuNTM2NDUxLDE4Mi44ODE0OTQgMjUwLjg5MjkyLDE4My41MjUwMjUgMjUwLjg5MjkyLDE4NC4zMTg1MyBMMjUwLjg5MjkyLDE4Ni42NzAwNDQgQzI1MC44OTI5MiwxODcuNDYzNTQ5IDI1MS41MzY0NTEsMTg4LjEwNzA4IDI1Mi4zMjk5NTYsMTg4LjEwNzA4IE0yNDAuNTcyMzg4LDE4OC4xMDcwOCBDMjQxLjM2NTg5MywxODguMTA3MDggMjQyLjAwOTQyNCwxODcuNDYzNTQ5IDI0Mi4wMDk0MjQsMTg2LjY3MDA0NCBMMjQyLjAwOTQyNCwxODQuMzE4NTMgQzI0Mi4wMDk0MjQsMTgzLjUyNTAyNSAyNDEuMzY1ODkzLDE4Mi44ODE0OTQgMjQwLjU3MjM4OCwxODIuODgxNDk0IEMyMzkuNzc4ODgyLDE4Mi44ODE0OTQgMjM5LjEzNTM1MiwxODMuNTI1MDI1IDIzOS4xMzUzNTIsMTg0LjMxODUzIEwyMzkuMTM1MzUyLDE4Ni42NzAwNDQgQzIzOS4xMzUzNTIsMTg3LjQ2MzU0OSAyMzkuNzc4ODgyLDE4OC4xMDcwOCAyNDAuNTcyMzg4LDE4OC4xMDcwOCI+PC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+)
+}
 
 .mydp .icon-mydpright:before {
-  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjEzcHgiIHZpZXdCb3g9IjAgMCA5IDEzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjI1MTQwMzg4Ij4gICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01NzYuMDAwMDAwLCAtMjM1LjAwMDAwMCkiIGZpbGw9IiM1ODU4NTgiPiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzNi4wMDAwMDAsIDIwMy4wMDAwMDApIj4gICAgICAgICAgICAgICAgPHBvbHlnb24gdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQ0LjM2ODM1OSwgMzguNjQ4Nzk2KSByb3RhdGUoLTkyLjAwMDAwMCkgdHJhbnNsYXRlKC0zNDQuMzY4MzU5LCAtMzguNjQ4Nzk2KSAiIHBvaW50cz0iMzQ4Ljk2ODM1OSAzNC45NDg3OTYzIDM0NC4zNjgzNTkgMzkuNTQ4Nzk2MyAzMzkuNzY4MzU5IDM0Ljk0ODc5NjMgMzM4LjM2ODM1OSAzNi4zNDg3OTYzIDM0NC4zNjgzNTkgNDIuMzQ4Nzk2MyAzNTAuMzY4MzU5IDM2LjM0ODc5NjMiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=); }
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjEzcHgiIHZpZXdCb3g9IjAgMCA5IDEzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjI1MTQwMzg4Ij4gICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01NzYuMDAwMDAwLCAtMjM1LjAwMDAwMCkiIGZpbGw9IiM1ODU4NTgiPiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzNi4wMDAwMDAsIDIwMy4wMDAwMDApIj4gICAgICAgICAgICAgICAgPHBvbHlnb24gdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQ0LjM2ODM1OSwgMzguNjQ4Nzk2KSByb3RhdGUoLTkyLjAwMDAwMCkgdHJhbnNsYXRlKC0zNDQuMzY4MzU5LCAtMzguNjQ4Nzk2KSAiIHBvaW50cz0iMzQ4Ljk2ODM1OSAzNC45NDg3OTYzIDM0NC4zNjgzNTkgMzkuNTQ4Nzk2MyAzMzkuNzY4MzU5IDM0Ljk0ODc5NjMgMzM4LjM2ODM1OSAzNi4zNDg3OTYzIDM0NC4zNjgzNTkgNDIuMzQ4Nzk2MyAzNTAuMzY4MzU5IDM2LjM0ODc5NjMiPjwvcG9seWdvbj4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=)
+}
 
 .mydp .icon-mydpleft:before {
-  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjEzcHgiIHZpZXdCb3g9IjAgMCA5IDEzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjI2MjQ4MTMwNSI+ICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTQwLjAwMDAwMCwgLTIzNS4wMDAwMDApIiBmaWxsPSIjNTg1ODU4Ij4gICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMzYuMDAwMDAwLCAyMDMuMDAwMDAwKSI+ICAgICAgICAgICAgICAgIDxwb2x5Z29uIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwOC4zNjgzNTksIDM4LjY0ODc5Nikgc2NhbGUoLTEsIDEpIHJvdGF0ZSgtOTIuMDAwMDAwKSB0cmFuc2xhdGUoLTMwOC4zNjgzNTksIC0zOC42NDg3OTYpICIgcG9pbnRzPSIzMTIuOTY4MzU5IDM0Ljk0ODc5NjMgMzA4LjM2ODM1OSAzOS41NDg3OTYzIDMwMy43NjgzNTkgMzQuOTQ4Nzk2MyAzMDIuMzY4MzU5IDM2LjM0ODc5NjMgMzA4LjM2ODM1OSA0Mi4zNDg3OTYzIDMxNC4zNjgzNTkgMzYuMzQ4Nzk2MyI+PC9wb2x5Z29uPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==); }
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOXB4IiBoZWlnaHQ9IjEzcHgiIHZpZXdCb3g9IjAgMCA5IDEzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjI2MjQ4MTMwNSI+ICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTQwLjAwMDAwMCwgLTIzNS4wMDAwMDApIiBmaWxsPSIjNTg1ODU4Ij4gICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMzYuMDAwMDAwLCAyMDMuMDAwMDAwKSI+ICAgICAgICAgICAgICAgIDxwb2x5Z29uIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwOC4zNjgzNTksIDM4LjY0ODc5Nikgc2NhbGUoLTEsIDEpIHJvdGF0ZSgtOTIuMDAwMDAwKSB0cmFuc2xhdGUoLTMwOC4zNjgzNTksIC0zOC42NDg3OTYpICIgcG9pbnRzPSIzMTIuOTY4MzU5IDM0Ljk0ODc5NjMgMzA4LjM2ODM1OSAzOS41NDg3OTYzIDMwMy43NjgzNTkgMzQuOTQ4Nzk2MyAzMDIuMzY4MzU5IDM2LjM0ODc5NjMgMzA4LjM2ODM1OSA0Mi4zNDg3OTYzIDMxNC4zNjgzNTkgMzYuMzQ4Nzk2MyI+PC9wb2x5Z29uPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==)
+}
 
-/* colors */
-/* calendar */
-my-date-picker[disabled=true] .mydp {
-  border-bottom: 1px solid #eee !important; }
-
-.c {
+.mydp {
   border: none !important;
   border-radius: 0 !important;
-  border-bottom: 1px solid #eee !important; }
-  .c .caltable,
-  .c .daycell,
-  .c .monthcell,
-  .c .monthtable,
-  .c .weekdaytitle,
-  .c .yearcell,
-  .c .yeartable,
-  .c .sunday {
-    color: #6c6c6c !important; }
-    .c .caltable.disabled,
-    .c .daycell.disabled,
-    .c .monthcell.disabled,
-    .c .monthtable.disabled,
-    .c .weekdaytitle.disabled,
-    .c .yearcell.disabled,
-    .c .yeartable.disabled,
-    .c .sunday.disabled {
-      color: #ccc !important;
-      cursor: default !important; }
-  .c .markcurrday, .c .selectedday .datevalue {
-    border-radius: 50%;
-    width: 39px;
-    height: 39px;
-    display: inline-block;
-    line-height: 39px;
-    color: #333 !important;
-    font-size: 12px;
-    text-decoration: none !important; }
-  .c .markcurrday {
-    background-color: transparent;
-    border: 1px solid #999; }
-  .c .selectedday .datevalue {
-    background-color: #fed100; }
-  .c tr td,
-  .c tr th {
-    height: 40px;
-    background-color: transparent !important; }
-    .c tr td:first-child,
-    .c tr th:first-child {
-      border-left: none !important; }
-  .c .weekdaytitle {
-    background-color: transparent !important;
-    color: #000 !important;
-    font-size: 16px !important; }
-  .c .caltable {
-    background-color: transparent !important; }
-  .c .nextmonth, .c .prevmonth {
-    background-color: transparent !important;
-    color: #cacaca !important; }
-  .c .header {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 30px;
-    background-color: transparent; }
-    .c .header .year {
-      position: relative;
-      width: 50%; }
-    .c .header .month {
-      width: 50%;
-      float: left;
-      position: relative; }
-    .c .header .headermonthtxt {
-      position: absolute;
-      top: 5px;
-      left: 0; }
-      .c .header .headermonthtxt button {
-        background-color: transparent;
-        text-transform: none;
-        font-size: 15px;
-        color: #333; }
-    .c .header .headerbtncell {
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      text-align: center; }
-      .c .header .headerbtncell button {
-        background-color: transparent; }
-      .c .header .headerbtncell.prev {
-        right: 40px; }
-      .c .header .headerbtncell.next {
-        right: 10px; }
-  .c .selectiongroup .seletion {
-    font-size: 16px; }
-  .c .daycell:focus, .c .monthcell:focus, .c .yearcell:focus {
-    outline: none !important; }
-  .c .range {
-    background-color: #fea000 !important; }
-  .c .selecteddaybegin,
-  .c .selecteddayend {
-    background-color: transparent !important; }
-  .c .selector, .c .selectorarrow {
-    border: none;
-    padding: 15px;
-    border-radius: 6px;
-    background-color: #f4f4f4;
-    box-shadow: 0 50px 100px 0px #ccc; }
-  .c .selectorarrow {
-    margin-top: 12px; }
-  .c .titleareatxt,
-  .c .selectorarrow:after,
-  .c .selectorarrow:before {
-    display: none; }
+  border-bottom: 1px solid #333 !important
+}
+
+.mydp .caltable,
+.mydp .daycell,
+.mydp .monthcell,
+.mydp .monthtable,
+.mydp .sunday,
+.mydp .weekdaytitle,
+.mydp .yearcell,
+.mydp .yeartable {
+  color: #6c6c6c !important
+}
+
+.mydp .caltable.disabled,
+.mydp .daycell.disabled,
+.mydp .monthcell.disabled,
+.mydp .monthtable.disabled,
+.mydp .sunday.disabled,
+.mydp .weekdaytitle.disabled,
+.mydp .yearcell.disabled,
+.mydp .yeartable.disabled {
+  color: #ccc !important;
+  cursor: default !important
+}
+
+.mydp .markcurrday,
+.mydp .selectedday .datevalue {
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  display: inline-block;
+  line-height: 39px;
+  color: #333 !important;
+  font-size: 12px;
+  text-decoration: none !important
+}
+
+.mydp .markcurrday {
+  background-color: transparent;
+  border: 1px solid #999
+}
+
+.mydp .selectedday .datevalue {
+  background-color: #fed100
+}
+
+.mydp .caltable,
+.mydp .nextmonth,
+.mydp .prevmonth,
+.mydp .weekdaytitle,
+.mydp tr td,
+.mydp tr th {
+  background-color: transparent !important
+}
+
+.mydp tr td,
+.mydp tr th {
+  height: 40px
+}
+
+.mydp tr td:first-child,
+.mydp tr th:first-child {
+  border-left: none !important
+}
+
+.mydp .weekdaytitle {
+  font-weight: 400;
+  vertical-align: middle;
+  max-width: 36px;
+  color: #000 !important;
+  font-size: 16px !important
+}
+
+.mydp .nextmonth,
+.mydp .prevmonth {
+  color: #cacaca !important
+}
+
+.mydp .header,
+.mydp .header .headerbtncell button {
+  background-color: transparent
+}
+
+.mydp .header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 30px
+}
+
+.mydp .header .month,
+.mydp .header .year {
+  width: 50%;
+  position: relative
+}
+
+.mydp .header .month {
+  float: left
+}
+
+.mydp .header .headermonthtxt {
+  position: absolute;
+  top: 5px;
+  left: 0
+}
+
+.mydp .header .headermonthtxt button {
+  background-color: transparent;
+  text-transform: none;
+  font-size: 15px;
+  color: #333
+}
+
+.mydp .header .headerbtncell {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  text-align: center
+}
+
+.mydp .header .headerbtncell.prev {
+  right: 40px
+}
+
+.mydp .header .headerbtncell.next {
+  right: 10px
+}
+
+.mydp .selectiongroup .seletion {
+  font-size: 16px
+}
+
+.mydp .daycell:focus,
+.mydp .monthcell:focus,
+.mydp .yearcell:focus {
+  outline: 0 !important
+}
+
+.mydp .range {
+  background-color: #fea000 !important
+}
+
+.mydp .selecteddaybegin,
+.mydp .selecteddayend {
+  background-color: transparent !important
+}
+
+.mydp .selector,
+.mydp .selectorarrow {
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  box-shadow: 0 50px 100px 0 #ccc
+}
+
+.mydp .selectorarrow {
+  margin-top: 12px
+}
+
+.mydp .selectorarrow:after,
+.mydp .selectorarrow:before,
+.mydp .titleareatxt {
+  display: none
+}
+
+.mydp.disabled{
+  border-bottom: 1px solid #EEE !important;
+}
