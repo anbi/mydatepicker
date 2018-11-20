@@ -614,7 +614,8 @@
 }
 
 .mydp .selectorarrow {
-  margin-top: 12px
+  margin-top: 12px;
+  top: 0;
 }
 
 .mydp .selectorarrow:after,
@@ -625,4 +626,19 @@
 
 .mydp.disabled{
   border-bottom: 1px solid #EEE !important;
+}
+
+@media screen and (max-width: 350px) {
+  .mydp .selectorarrow {
+    top: 0;
+    margin-top: 12px;
+    left: -23px;
+  }
+}
+
+.mydp .yearcell.disabled,
+.mydp .daycell.disabled {
+  letter-spacing: normal !important;
+  color: #ccc !important;
+  opacity: 0.5 !important;  
 }
